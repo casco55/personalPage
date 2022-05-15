@@ -11,7 +11,7 @@ import { Us } from "../components/Us";
 import { NavBar } from "../ui/NavBar";
 import { PrivateRoute } from "./PrivateRoute";
   export const AppRouter = () => {
-      const isLoggedIn = false;
+      const isLoggedIn = true;
       return (
         <>
           <Router>
