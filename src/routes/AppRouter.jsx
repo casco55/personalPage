@@ -8,18 +8,22 @@ import {
 
 import { Home } from "../components/Home";
 import { Us } from "../components/Us";
+import { NavBar } from "../ui/NavBar";
 import { PrivateRoute } from "./PrivateRoute";
   export const AppRouter = () => {
       const isLoggedIn = false;
       return (
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route exact path='/' element={<PrivateRoute isLoggedIn={isLoggedIn}/>}>
-                        <Route exact path='/us' element={<Us/>}/>
-                    </Route>
-                </Routes>
-            </Router>
+        <>
+          <Router>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route exact path='/' element={<PrivateRoute isLoggedIn={isLoggedIn}/>}>
+                <Route exact path='/us' element={<Us/>}/>
+              </Route>
+            </Routes>
+          </Router>
+        </>
       );
     };
         
