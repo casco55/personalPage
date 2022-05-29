@@ -10,5 +10,6 @@ export default defineConfig({
     inject({
       $: 'jquery',
   }),
-    react()]
+    react(),
+  ]
 })
