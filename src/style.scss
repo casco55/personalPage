@@ -1,5 +1,10 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+$margin50: 50;
+$margin10: 10;
+$smScreen: 1023;
+$lgScreen: 1024;
+$fontSize15: 15;
 
 .menuIcon{
     z-index: 100;
@@ -28,7 +33,41 @@
 }
 li{
     list-style: none;
+    text-decoration: none;
 }
-.nav-link{
-    color: white !important;
+.text-decoration-none{
+    text-decoration: none;
+}
+.marginTop{
+    &__sm{
+        &__#{$margin50} {
+            @media screen and (max-width: #{$smScreen}px) {
+                margin-top: #{$margin50}px;
+            }
+            
+        }
+    }
+    &__lg{
+        &__#{$margin10} {
+            @media screen and (min-width: #{$lgScreen}px) {
+                margin-top: #{$margin10}px;
+            }
+        }
+    }
+}
+.colorWhite{
+    color: white;
+}
+.absolute-centered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.brightness40 {
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+}
+.font-size-#{$fontSize15} {
+    font-size: 1.2rem;
+    font-weight: 800;
 }
